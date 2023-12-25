@@ -20,8 +20,9 @@
     peer-[:not(:placeholder-shown)]:text-gray-400">Enter city and press Enter</label>
 </div>
     <div v-if="weatherData" class="flex flex-col text-center items-center">
-      <div class="p-4 max-w-40 mx-auto" v-html="displayIcon(weatherData.weather[0].main.toUpperCase())">
-      </div>
+      <div class="p-4 max-w-40 mx-auto">
+        <img :src="'src/assets/icons/' + displayIcon(weatherData.weather[0].main.toUpperCase())" alt="Weather Icon">
+</div>
       <div class="p-4">
       <p class="text-stone-600">{{ weatherData.weather[0].main.toUpperCase() }}</p>
       <p class="text-stone-400">{{ weatherData.name }}, {{ weatherData.sys.country }}</p>
@@ -35,11 +36,11 @@
     </div>
     <div class="py-6 flex flex-row gap-24">
       <div>  
-        <img class="max-w-10 mx-auto" src="../components/icons/sunrise.png" alt="">
+        <img class="max-w-10 mx-auto" src="../assets/icons/sunrise.png" alt="">
         <p>{{ getFormattedTime(weatherData.sys.sunrise) }}</p>
       </div>
       <div> 
-        <img class="max-w-10 mx-auto" src="../components/icons/sunset.png" alt="">
+        <img class="max-w-10 mx-auto" src="../assets/icons/sunset.png" alt="">
         <p> {{getFormattedTime(weatherData.sys.sunset) }}</p>
       </div>
     </div>

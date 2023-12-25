@@ -1,18 +1,23 @@
-
-export function displayIcon(query: string) {
-    if(query == 'CLOUDS') {
-        return '<img src="src/components/icons/clouds.png" alt="Clouds Icon">';
-    } else if (query == 'THUNDERSTORM') {
-        return '<img src="src/components/icons/thunderstorm.png" alt="Thunderstorm Icon">';
-    } else if (query == 'DRIZZLE') {
-        return '<img src="src/components/icons/drizzle.png" alt="Drizzle Icon">';
-    } else if (query == 'RAIN') {
-        return '<img src="src/components/icons/rain.png" alt="Rain Icon">';
-    } else if (query == 'SNOW') {
-        return '<img src="src/components/icons/snow.png" alt="Snow Icon">';
-    } else if (query == 'CLEAR') {
-        return '<img src="src/components/icons/clear.png" alt="Clear Icon">';
-    } else if (query == 'MIST') {
-        return '<img src="src/components/icons/mist.png" alt="Mist Icon">';
+export function displayIcon(query: string): string {
+    const lowercasedQuery = query.toLowerCase();
+    
+    if (lowercasedQuery === 'clouds') {
+      return 'clouds.png';
+    } else if (lowercasedQuery === 'thunderstorm') {
+      return 'thunderstorm.png';
+    } else if (lowercasedQuery === 'drizzle') {
+      return 'drizzle.png';
+    } else if (lowercasedQuery === 'rain') {
+      return 'rain.png';
+    } else if (lowercasedQuery === 'snow') {
+      return 'snow.png';
+    } else if (lowercasedQuery === 'clear') {
+      return 'clear.png';
+    } else if (lowercasedQuery === 'mist') {
+      return 'mist.png';
+    } else {
+      return 'any.png';
     }
-}
+  }
+  
+ 
