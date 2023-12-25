@@ -48,22 +48,20 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { formatNumber } from '../stores/formatFunctions'
 import type { WeatherData } from  '../interfaces/WeatherData'
+import { formatNumber } from '../stores/formatFunctions'
 import {displayIcon} from '../stores/displayIcon'
 import {getFormattedTime} from '../stores/getTime'
 const city = ref('');
-const apiKey = '76bc43522b04b7a9159fdf5db71b8860';
+const apiKey = import.meta.env.VITE_OPENWEATHERMAP_API_KEY
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
 //a generic object type, which allows any properties with any values
 const weatherData = ref<WeatherData | null>(null);
-
 async function checkWeather() {
   try {
     const response = await fetch(apiUrl + city.value + `&appid=${apiKey}&units=metric`);
     const data = await response.json();
-    console.log(data);
     weatherData.value = data;
   } catch (error) {
     console.error('Error fetching weather data:', error);
