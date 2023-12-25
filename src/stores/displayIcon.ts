@@ -1,3 +1,4 @@
+
 export function displayIcon(query: string) {
     if(query == 'CLOUDS') {
         return '<img src="src/components/icons/clouds.png" alt="Clouds Icon">';
