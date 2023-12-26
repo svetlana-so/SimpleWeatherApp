@@ -65,7 +65,7 @@ async function checkWeather() {
     const data = await response.json();
     weatherData.value = data;
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error fetching weather data:', error);
   }
 }
 </script>
