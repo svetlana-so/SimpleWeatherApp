@@ -36,11 +36,11 @@
     </div>
     <div class="py-6 flex flex-row gap-24">
       <div>  
-        <img class="max-w-10 mx-auto" src="../assets/icons/sunrise.png" alt="">
+        <img class="max-w-10 mx-auto" src="/src/assets/icons/sunrise.png" alt="">
         <p>{{ getFormattedTime(weatherData.sys.sunrise) }}</p>
       </div>
       <div> 
-        <img class="max-w-10 mx-auto" src="../assets/icons/sunset.png" alt="">
+        <img class="max-w-10 mx-auto" src="/src/assets/icons/sunset.png" alt="">
         <p> {{getFormattedTime(weatherData.sys.sunset) }}</p>
       </div>
     </div>
