@@ -1,6 +1,5 @@
 export function displayIcon(query: string): string {
     const lowercasedQuery = query.toLowerCase();
-    console.log(query)
     
     if (lowercasedQuery === 'clouds') {
       return 'clouds.png';
